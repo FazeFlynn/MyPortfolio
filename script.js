@@ -1,3 +1,4 @@
+
 let menuButton = document.getElementById('menu');
 let menuOverlay = document.getElementById('menu-overlay');
 let menuContainer = document.getElementById('menu-container');
@@ -7,6 +8,62 @@ let myImg = document.getElementById('img-slide');
 let test = document.getElementById('click-test');
 let aboutMeP = document.getElementById('about-me-p');
 let introText = document.getElementById('intro-text');
+
+let allLayers = document.getElementById('all-layers');
+
+let theme = document.getElementById('mode');
+
+
+
+const root = document.documentElement;
+
+
+
+theme.addEventListener('click', changeTheme);
+
+isDark = true;
+
+function changeTheme(){
+    if(isDark){
+        root.style.setProperty('--primary-back-color', '#E8F5E9');
+        root.style.setProperty('--primary-fore-color', '#004D40');
+        root.style.setProperty('--font-color', 'black');
+        theme.className = "bx bxs-moon"
+        isDark = false;
+    } else {
+        root.style.setProperty('--primary-back-color', '#000011');
+        root.style.setProperty('--primary-fore-color', '#b55de9');
+        root.style.setProperty('--font-color', '#fff');
+        theme.className = "bx bx-moon"
+        isDark = true;
+    }
+
+}
+
+
+allLayers.addEventListener('click', showAllLayer);
+
+let layersEnabled = false;
+
+function showAllLayer(){
+
+    if(!layersEnabled){
+        ptests.forEach((divs) => {
+            divs.classList.add('expanded');
+        });
+        // allLayers.style.backgroundColor = 'red';
+        allLayers.style.backgroundColor = 'blue';
+        layersEnabled = true;
+    } else {
+        ptests.forEach((divs) => {
+            divs.classList.remove('expanded');
+        });
+        allLayers.style.backgroundColor = 'transparent';
+        layersEnabled = false;
+
+    }
+
+}
 
 
 const foregroundColors = [
@@ -132,10 +189,14 @@ function showAllp(mptest,a){
 
     if(!isSome){
         mptest.classList.add('expanded');
+        allLayers.style.backgroundColor = 'transparent';
+        layersEnabled = false;
         isSome = true;
     } else {
         mptest.classList.remove('expanded');
         isSome = false;
+        allLayers.style.backgroundColor = 'transparent';
+        layersEnabled = false;
 
 
     }

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Islam Khan</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -47,7 +47,12 @@
     </div>
     
     <div id="my-skills" class="skills-div">
-      <h1 class="headings">Skills:</h1>
+      <div class="head-container">
+        <h1 class="headings">Skills:</h1>
+        <!-- <p class="layer-hover">Open all layers</p> -->
+        <i id="all-layers" class='bx bx-layer'></i>
+      </div>
+      
       
       <div class="skills-inner dt1">
         
@@ -67,9 +72,12 @@
           <a class="hovers clicked" >Post Production</a>
           <a class="hovers clicked" >Photo Manipulation</a>
           <a class="hovers clicked" >Audio Mixing</a>
-
-
         </div>
+
+        <!-- <div class="d1 d2">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda deserunt quisquam sit animi aliquid minima quas quo magni, architecto itaque repudiandae incidunt, accusantium mollitia quod! Neque rerum maxime praesentium! Sapiente.</p>
+        </div> -->
+
       </div>
     </div>
 
@@ -122,7 +130,9 @@
 
     <div id="menu-overlay">     
       <div id="menu-container">
-        <p>Faze Flynn</p>
+        <!-- <i class='bx bx-chevron-left'></i> -->
+        <!-- <i class='bx bx-chevron-right' ></i> -->
+        <p><i class='bx bx-code' ></i>Faze Flynn</p>
         <a href="/" class="active">Home</a>
         <a onclick="scrollToSection('about-me')" href="#">About</a>
         <a onclick="scrollToSection('my-skills')" href="#">Skills</a>

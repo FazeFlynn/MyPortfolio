@@ -1,6 +1,12 @@
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, porro
-          voluptatibus a consequuntur magnam eveniet natus corporis quidem
-          architecto pariatur odit expedita qui sapiente enim, laborum, fugiat
-          tempora. Architecto, suscipit ipsum. Quam, odio tenetur alias magni
-          ratione modi aut explicabo quod cum sunt temporibus qui laudantium
-          laborum veritatis fugit laboriosam!
+
+
+
+
+
+<span>Languages</span>: C++, Java, Python, SQL.<br>
+Wed Development: Html, Css, JavaScript, Backend Technologies (Node.js, React.js).<br>
+Data Analysis, Data Visualization, Statistical Analysis, Tools (Excel, R, Tableau).<br>
+SQL Databases (MySQL, PostgreSQL), NoSQL Databases (MongoDB).<br>
+Proficient in various data structures (arrays, linked lists, trees, graphs, etc.).<br>
+Algorithm design and optimization.<br>
+Analytical thinking, Creative solutions for complex problems.<br>
