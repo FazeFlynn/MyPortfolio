@@ -23,6 +23,9 @@ theme.addEventListener('click', changeTheme);
 
 isDark = true;
 
+primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
+primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
+
 function changeTheme(){
     if(isDark){
         root.style.setProperty('--primary-back-color', '#E8F5E9');
@@ -30,20 +33,32 @@ function changeTheme(){
         root.style.setProperty('--font-color', 'black');
         theme.className = "bx bxs-moon"
         isDark = false;
+        primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
+        primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
+        changeLayerColor();
+
     } else {
         root.style.setProperty('--primary-back-color', '#000011');
         root.style.setProperty('--primary-fore-color', '#b55de9');
         root.style.setProperty('--font-color', '#fff');
         theme.className = "bx bx-moon"
         isDark = true;
+        primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
+        primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
+        changeLayerColor();
+
     }
 
 }
 
 
+
+
+
 allLayers.addEventListener('click', showAllLayer);
 
 let layersEnabled = false;
+
 
 function showAllLayer(){
 
@@ -51,18 +66,32 @@ function showAllLayer(){
         ptests.forEach((divs) => {
             divs.classList.add('expanded');
         });
-        // allLayers.style.backgroundColor = 'red';
-        allLayers.style.backgroundColor = 'blue';
+        // primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
+        // primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
+        allLayers.style.backgroundColor = primaryForeColor;
+        allLayers.style.color = primaryBackColor;
         layersEnabled = true;
     } else {
         ptests.forEach((divs) => {
             divs.classList.remove('expanded');
         });
         allLayers.style.backgroundColor = 'transparent';
+        allLayers.style.color = primaryForeColor;
         layersEnabled = false;
 
     }
 
+}
+
+function changeLayerColor(){
+    if(!layersEnabled){
+        allLayers.style.backgroundColor = 'transparent';
+        allLayers.style.color = primaryForeColor;
+    } else {
+        allLayers.style.backgroundColor = primaryForeColor;
+        allLayers.style.color = primaryBackColor;
+        
+    }
 }
 
 
@@ -339,3 +368,12 @@ function detectDevice() {
 }
 
 detectDevice();
+
+function openGmail() {
+    const email = 'faiz.14a@gmail.com';
+    const subject = encodeURIComponent('Hey Islam!, I would like to talk.');
+    const body = encodeURIComponent('Your message here...');
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    
+    window.open(gmailUrl, '_blank');
+}
