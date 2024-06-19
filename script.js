@@ -63,6 +63,8 @@ function showAllLayer(){
         allLayers.style.backgroundColor = primaryForeColor;
         allLayers.style.color = primaryBackColor;
         console.log("test color is set to - ", primaryForeColor);
+        allLayers.style.transform = "rotate(180deg)";
+
         layersEnabled = true;
     } else {
         ptests.forEach((divs) => {
@@ -72,6 +74,8 @@ function showAllLayer(){
         console.log("test backcolor is set to - transparent");
         allLayers.style.color = primaryForeColor;
         console.log("test color is set to - ", primaryForeColor);
+        allLayers.style.transform = "rotate(0deg)";
+
 
         layersEnabled = false;
 
@@ -84,6 +88,7 @@ function changeLayerColor(){
         allLayers.style.backgroundColor = 'transparent';
         allLayers.style.color = primaryForeColor;
     } else {
+
         allLayers.style.backgroundColor = primaryForeColor;
         allLayers.style.color = primaryBackColor;
         
