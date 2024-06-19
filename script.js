@@ -41,7 +41,7 @@ function changeTheme(){
         root.style.setProperty('--primary-back-color', '#000011');
         root.style.setProperty('--primary-fore-color', '#b55de9');
         root.style.setProperty('--font-color', '#fff');
-        theme.className = "bx bx-moon"
+        theme.className = "bx bx-moon";
         isDark = true;
         primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
         primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
@@ -51,14 +51,8 @@ function changeTheme(){
 
 }
 
-
-
-
-
 allLayers.addEventListener('click', showAllLayer);
-
 let layersEnabled = false;
-
 
 function showAllLayer(){
 
@@ -66,17 +60,19 @@ function showAllLayer(){
         ptests.forEach((divs) => {
             divs.classList.add('expanded');
         });
-        // primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
-        // primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
         allLayers.style.backgroundColor = primaryForeColor;
         allLayers.style.color = primaryBackColor;
+        console.log("test color is set to - ", primaryForeColor);
         layersEnabled = true;
     } else {
         ptests.forEach((divs) => {
             divs.classList.remove('expanded');
         });
         allLayers.style.backgroundColor = 'transparent';
+        console.log("test backcolor is set to - transparent");
         allLayers.style.color = primaryForeColor;
+        console.log("test color is set to - ", primaryForeColor);
+
         layersEnabled = false;
 
     }
