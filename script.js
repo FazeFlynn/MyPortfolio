@@ -369,11 +369,11 @@ function detectDevice() {
 
 detectDevice();
 
-function openGmail() {
-    const email = 'faiz.14a@gmail.com';
-    const subject = encodeURIComponent('Hey Islam!, I would like to talk.');
-    const body = encodeURIComponent('Your message here...');
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+// function openGmail() {
+//     const email = 'faiz.14a@gmail.com';
+//     const subject = encodeURIComponent('Hey Islam!, I would like to talk.');
+//     const body = encodeURIComponent('Your message here...');
+//     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
     
-    window.open(gmailUrl, '_blank');
-}
+//     window.open(gmailUrl, '_blank');
+// }
