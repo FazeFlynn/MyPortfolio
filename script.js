@@ -156,12 +156,14 @@ fetch('docs/aboutTxt.txt')
 
 isSome = false;
 
+let fm = 0;
+
 document.querySelectorAll('.clicked').forEach((a) => {  
     
     let ptest = document.createElement('p');
     ptest.classList.add('p-test');
 
-    fetch('docs/mytxt.txt')
+    fetch(`docs/mytxt${fm}.txt`)
             .then(response => response.text())
             .then(data => {
                 // Insert the content into the div
@@ -172,6 +174,7 @@ document.querySelectorAll('.clicked').forEach((a) => {
 
     // ptest.textContent = pText;
     a.insertAdjacentElement('afterend',ptest);    
+    fm++;
 });
 
 
@@ -242,10 +245,11 @@ isclicked = false;
 function showP(ptest){
     if(!isclicked){
         ptest.style.display = '';
-        // ptest.style.height = 'auto';
+        // ptest.style.minHeight = '300px';
         // ptest.style.padding = '3px';
         ptest.style.maxHeight = '300px';
-        ptest.style.width = '100%';
+        // ptest.style.height = '300px';
+        // ptest.style.width = '100%';
         ptest.style.transform = 'scale(100%)';
         isclicked = true;
 
@@ -257,6 +261,8 @@ function showP(ptest){
     } else {
         // ptest.style.display = 'none';
         ptest.style.maxHeight = '0px';
+        // ptest.style.minHeight = '0px';
+        // ptest.style.height = '0px';
         // ptest.style.padding = '0px';
         // ptest.style.width = '0px';
         ptest.style.transform = 'scale(90%)';

@@ -5,6 +5,9 @@
     --primary-back-color: #000011;
     --primary-fore-color: #b55de9;
     
+    /* --primary-back-color: #090c0f;
+    --primary-fore-color: #10f177; */
+    
     /* --primary-back-color: #ffffff; */
     /* --primary-fore-color: #221927; */
 
@@ -296,7 +299,8 @@ body{
 
 #img-slide{
     width: 100%;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-radius: 10px;
     box-shadow: 0px 0px 500px var(--primary-fore-color);
     /* overflow:visible; */
 
@@ -611,6 +615,7 @@ p span {
     border-radius: 8px;
 
     max-height: 0px;
+    /* min-height: 0px; */
     /* height: 0px; */
 
     overflow:auto;
