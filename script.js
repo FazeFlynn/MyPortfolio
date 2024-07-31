@@ -384,3 +384,33 @@ detectDevice();
     
 //     window.open(gmailUrl, '_blank');
 // }
+
+
+
+let myForm = document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const status = document.getElementById('status');
+    const formData = new FormData(this);
+
+    const emailParams = {
+        first_name: formData.get('first-name'),
+        last_name: formData.get('last-name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+    };
+
+
+    // Using EmailJS to send the form data
+    emailjs.send('service_kx2oni7', 'template_2da9aeu', emailParams)
+        .then(function() {
+            status.innerHTML = "Message sent successfully!";
+            status.style.color = primaryForeColor;
+        }, function(error) {
+            status.innerHTML = "Failed to send message. Please try again.";
+            status.style.color = "red";
+        });
+        
+        this.reset();        
+});

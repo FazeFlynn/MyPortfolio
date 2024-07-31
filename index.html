@@ -11,6 +11,17 @@
     />
 
     <script defer src="script.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Wv7EOveKy0qUrKLk7",
+      });
+   })();
+</script>
     
   </head>
   <body>
@@ -23,20 +34,22 @@
         <a onclick="scrollToSection('about-me')" href="#">About</a>
         <a onclick="scrollToSection('my-skills')" href="#">Skills</a>
         <a onclick="scrollToSection('my-projects')" href="#">Projects</a>
-        <a onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a>
+        <!-- <a onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a> -->
+        <a onclick="scrollToSection('form-con')" href="#">Contact me</a>
         <i id="menu" class='bx bx-menu'></i>
       </nav>
     </header>
 
     <div class="home">
       <div class="home-content">
-        <h1>Hi, I am Islam Khan.</h1>
+        <h1>Hi, I am <span id="my-name">Islam Khan.</span></h1>
         <h3 id="web">Data Analyst, Web Developer</h3>
         <p id="intro-text"></p>
         <div class="btn-box">
-          <!-- <a class="hover-eff" href="docs/IslamKathatResume.pdf" download="IslamKathatResume.pdf">Hire me</a> -->
-          <a class="hover-eff" href="https://drive.google.com/file/d/1-SqXriy2ICFajspeMd-ASN2F4Nm1ZnDB/view?usp=drive_link" target="_blank" >Hire me</a>
-          <a class="hover-eff" onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a>
+          <a class="hover-eff" href="docs/IslamKathatResume.pdf" target="_blank">Hire me</a>
+          <!-- <a class="hover-eff" href="https://drive.google.com/file/d/1-SqXriy2ICFajspeMd-ASN2F4Nm1ZnDB/view?usp=drive_link" target="_blank" >Hire me</a> -->
+          <a class="hover-eff" onclick="scrollToSection('form-con')" href="#">Contact me</a>
+          <!-- <a class="hover-eff" onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a> -->
           <!-- <a class="hover-eff" onclick="openGmail()" href="#">Contact me</a> -->
         </div>
 
@@ -115,7 +128,34 @@
       <div id="about-me-p" class="skills-inner no-padding">
       </div>
     </div>
-    
+
+
+    <div id="form-con">     
+      
+      <div class="contact-form-container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <label for="first-name">First name:</label>
+          <input class="inp-cl" type="text" id="first-name" name="first-name" required>
+
+          <label for="last-name">Last name:</label>
+          <input class="inp-cl" type="text" id="last-name" name="last-name" required>
+
+          <label for="subject">Subject:</label>
+          <input class="inp-cl" type="text" id="subject" name="subject" required>
+          
+          <label for="email">Email:</label>
+          <input class="inp-cl" type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea class="inp-cl" id="message" name="message" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="status"></div>
+      </div>
+      
+    </div>
 
 
 
@@ -151,5 +191,4 @@
 
 </body>
 </html>
-
 

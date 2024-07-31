@@ -258,6 +258,10 @@ body{
 
 }
 
+#my-name {
+    color: var(--primary-fore-color);
+}
+
 .home-content h1{
     color: var(--font-color);
     height: auto;
@@ -956,3 +960,99 @@ h1{
 
 
 
+/* ==================================FORM==================================== */
+
+#form-con{
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    /* padding: 10% 0 0 5%; */
+
+    padding: 30px 20px;
+
+    border-top: 1px solid var(--primary-fore-color);
+    
+
+
+    
+}
+
+.contact-form-container {
+    /* background-color: rebeccapurple; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px var(--primary-fore-color);
+    width: 100%;
+    max-width: 850px;
+
+    /* border: 1px solid var(--primary-fore-color); */
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--primary-fore-color);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-fore-color);
+    border-radius: 5px;
+    background-color: transparent;
+    
+    font-weight: 500;
+
+    color: var(--primary-fore-color);
+}
+
+.inp-cl:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px var(--primary-back-color) inset !important; /* Change the background color to white */
+    -webkit-text-fill-color: var(--primary-fore-color) !important; /* Change the text color */
+    /* font-family: 'Open Sans', sans-serif !important; */
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+
+    /* font-weight: 600; */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-fore-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+button:hover {
+    /* background-color: #218838; */
+    opacity: 90%;
+}
+
+#status {
+    margin-top: 10px;
+    /* background-color: red; */
+    text-align: center;
+}
