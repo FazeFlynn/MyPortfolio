@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyClock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>    
+    
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+            <div id="clock" class="hide">
+                <div class="time-sig">
+
+                    <div style="--time-sig:1" class="sig-min-struc"></div>
+                    <div style="--time-sig:2" class="sig-min-struc"></div>
+                    <div style="--time-sig:3" class="sig-min-struc"></div>
+                    <div style="--time-sig:4" class="sig-min-struc"></div>
+                    <div style="--time-sig:5" class="sig-min-struc"></div>
+                    <div style="--time-sig:6" class="sig-min-struc"></div>
+                    <div style="--time-sig:7" class="sig-min-struc"></div>
+                    <div style="--time-sig:8" class="sig-min-struc"></div>
+                    <div style="--time-sig:9" class="sig-min-struc"></div>
+                    <div style="--time-sig:10" class="sig-min-struc"></div>
+                    <div style="--time-sig:11" class="sig-min-struc"></div>
+                    <div style="--time-sig:12" class="sig-min-struc"></div>
+                    <div style="--time-sig:13" class="sig-min-struc"></div>
+                    <div style="--time-sig:14" class="sig-min-struc"></div>
+                    <div style="--time-sig:15" class="sig-min-struc"></div>
+                    <div style="--time-sig:16" class="sig-min-struc"></div>
+                    <div style="--time-sig:17" class="sig-min-struc"></div>
+                    <div style="--time-sig:18" class="sig-min-struc"></div>
+                    <div style="--time-sig:19" class="sig-min-struc"></div>
+                    <div style="--time-sig:20" class="sig-min-struc"></div>
+                    <div style="--time-sig:21" class="sig-min-struc"></div>
+                    <div style="--time-sig:22" class="sig-min-struc"></div>
+                    <div style="--time-sig:23" class="sig-min-struc"></div>
+                    <div style="--time-sig:24" class="sig-min-struc"></div>
+                    <div style="--time-sig:25" class="sig-min-struc"></div>
+                    <div style="--time-sig:26" class="sig-min-struc"></div>
+                    <div style="--time-sig:27" class="sig-min-struc"></div>
+                    <div style="--time-sig:28" class="sig-min-struc"></div>
+                    <div style="--time-sig:29" class="sig-min-struc"></div>
+                    <div style="--time-sig:30" class="sig-min-struc"></div>
+                    <div class="time-min-sig-overlay"></div>
+
+                    <div style="--hr:1" id="time-sig-div1" class="sig-struc"></div>
+                    <div style="--hr:2" id="time-sig-div2" class="sig-struc"></div>
+                    <div style="--hr:3" id="time-sig-div3" class="sig-struc"></div>
+                    <div style="--hr:4" id="time-sig-div4" class="sig-struc"></div>
+                    <div style="--hr:5" id="time-sig-div5" class="sig-struc"></div>
+                    <div style="--hr:6" id="time-sig-div6" class="sig-struc"></div>
+                    <div class="time-sig-overlay"></div>
+
+                    <div class="clock-nums">
+
+                        <span style="--i:1"><p >1</p></span>
+                        <span style="--i:2"><p >2</p></span>
+                        <span style="--i:3"><p >3</p></span>
+                        <span style="--i:4"><p >4</p></span>
+                        <span style="--i:5"><p >5</p></span>
+                        <span style="--i:6"><p >6</p></span>
+                        <span style="--i:7"><p >7</p></span>
+                        <span style="--i:8"><p >8</p></span>
+                        <span style="--i:9"><p >9</p></span>
+                        <span style="--i:10"><p >10</p></span>
+                        <span style="--i:11"><p >11</p></span>
+                        <span style="--i:12"><p >12</p></span>
+                    </div>
+                    <!-- <p>.</p> -->
+                    <div class="clock-hands">
+
+                        <div class="center-point"></div>
+                        <div class="hour-hand hands">
+                            <div class="hour"></div>
+                        </div>
+                        <div class="min-hand hands">
+                            <div class="min"></div>
+                        </div>
+                        <div class="sec-hand hands">
+                            <div class="sec"></div>
+                        </div>
+                        
+                        <div class="center-point-up"></div>                
+                    </div>
+                </div>  
+            </div>
+        
+            <div id="digclock" class="hidden">
+
+                <div class="digclock-inner">
+                    <span id="timehr" class="set-font time"></span>
+                    <span id="timemn" class="set-font time"></span>
+                    <span id="timesc" class="set-font time"></span>
+                    <span id="mer" class="set-font time"></span>
+                </div>
+            </div>
+            <div id="ist">
+                <span id="indian" class="set-font">Indian Standard Time |</span>
+            </div>
+            <!-- <div class="test"></div> -->
+
+            <div id="stop-watch" class="stopwatch-div">
+
+                <div class="time-sig">
+
+                    <div style="--time-sig:1" class="sig-min-struc"></div>
+                    <div style="--time-sig:2" class="sig-min-struc"></div>
+                    <div style="--time-sig:3" class="sig-min-struc"></div>
+                    <div style="--time-sig:4" class="sig-min-struc"></div>
+                    <div style="--time-sig:5" class="sig-min-struc"></div>
+                    <div style="--time-sig:6" class="sig-min-struc"></div>
+                    <div style="--time-sig:7" class="sig-min-struc"></div>
+                    <div style="--time-sig:8" class="sig-min-struc"></div>
+                    <div style="--time-sig:9" class="sig-min-struc"></div>
+                    <div style="--time-sig:10" class="sig-min-struc"></div>
+                    <div style="--time-sig:11" class="sig-min-struc"></div>
+                    <div style="--time-sig:12" class="sig-min-struc"></div>
+                    <div style="--time-sig:13" class="sig-min-struc"></div>
+                    <div style="--time-sig:14" class="sig-min-struc"></div>
+                    <div style="--time-sig:15" class="sig-min-struc"></div>
+                    <div style="--time-sig:16" class="sig-min-struc"></div>
+                    <div style="--time-sig:17" class="sig-min-struc"></div>
+                    <div style="--time-sig:18" class="sig-min-struc"></div>
+                    <div style="--time-sig:19" class="sig-min-struc"></div>
+                    <div style="--time-sig:20" class="sig-min-struc"></div>
+                    <div style="--time-sig:21" class="sig-min-struc"></div>
+                    <div style="--time-sig:22" class="sig-min-struc"></div>
+                    <div style="--time-sig:23" class="sig-min-struc"></div>
+                    <div style="--time-sig:24" class="sig-min-struc"></div>
+                    <div style="--time-sig:25" class="sig-min-struc"></div>
+                    <div style="--time-sig:26" class="sig-min-struc"></div>
+                    <div style="--time-sig:27" class="sig-min-struc"></div>
+                    <div style="--time-sig:28" class="sig-min-struc"></div>
+                    <div style="--time-sig:29" class="sig-min-struc"></div>
+                    <div style="--time-sig:30" class="sig-min-struc"></div>
+                    <div class="time-min-sig-overlay"></div>
+
+                    <div style="--hr:1" id="time-sig-div1" class="sig-struc"></div>
+                    <div style="--hr:2" id="time-sig-div2" class="sig-struc"></div>
+                    <div style="--hr:3" id="time-sig-div3" class="sig-struc"></div>
+                    <div style="--hr:4" id="time-sig-div4" class="sig-struc"></div>
+                    <div style="--hr:5" id="time-sig-div5" class="sig-struc"></div>
+                    <div style="--hr:6" id="time-sig-div6" class="sig-struc"></div>
+                    <div class="time-sig-overlay"></div>
+
+                    <div class="clock-nums">
+
+                        <span style="--i:1"><p >5</p></span>
+                        <span style="--i:2"><p >10</p></span>
+                        <span style="--i:3"><p >15</p></span>
+                        <span style="--i:4"><p >20</p></span>
+                        <span style="--i:5"><p >25</p></span>
+                        <span style="--i:6"><p >30</p></span>
+                        <span style="--i:7"><p >35</p></span>
+                        <span style="--i:8"><p >40</p></span>
+                        <span style="--i:9"><p >45</p></span>
+                        <span style="--i:10"><p >50</p></span>
+                        <span style="--i:11"><p >55</p></span>
+                        <span style="--i:12"><p >60</p></span>
+                    </div>
+
+                    <div id="stop-hand" class="stop-hands">
+                        <div class="stop-center1"></div>
+                        <div class="stop-center2"></div>                        
+                        <div class="stop-min-hand"></div>
+                    </div>
+
+                    <div id="timer-inside" class="dig-stop">00:00.00</div>
+                </div>
+            </div>
+
+            <div id="lap-container" class="border-accent">
+                <div class="lap-text lap-div">Laps</div>
+            </div>
+
+            <div id="timer-button" class="timer-div">Timer</div>
+
+            <div id="options-div">                
+                <div id="options-clock" class="timer-div">Clock</div>
+                <div id="options-clear-flags" class="timer-div">Clear flags</div>
+                <div id="options-timer" class="timer-div">Start</div>
+                <div id="options-play-pause" class="timer-div">Pause</div>
+                <div id="options-flag-time" class="timer-div">Flag time</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
