@@ -43,6 +43,8 @@
 
     /* transition: color .3s ease; */
     transition: background-color .5s ease;
+
+    cursor: url(img/mc24.ico), auto;
 }
 
 html {
@@ -129,6 +131,10 @@ body{
     color:var(--primary-fore-color);
     text-decoration: none;
     font-weight: 700;
+
+    /* text-decoration:overline; */
+    /* text-underline-offset: 8px;  */
+    
 }
 
 .logo:hover{
@@ -672,9 +678,11 @@ p span {
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
 
     flex-direction: column;
+
+    /* background-color: red; */
 }
 
 .d2 {
@@ -687,7 +695,7 @@ p span {
 .dt1 {
     /* background-color: rebeccapurple; */
     justify-content: center;
-    align-items: center;
+    align-items: self-start;
 }
 
 

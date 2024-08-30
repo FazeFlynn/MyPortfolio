@@ -12,6 +12,7 @@ let introText = document.getElementById('intro-text');
 let allLayers = document.getElementById('all-layers');
 
 let theme = document.getElementById('mode');
+let subBut = document.getElementById('sub-button');
 
 
 
@@ -392,6 +393,7 @@ let myForm = document.getElementById('contact-form').addEventListener('submit', 
     
     const status = document.getElementById('status');
     const formData = new FormData(this);
+    subBut.textContent = "Please Wait🚀";
 
     const emailParams = {
         first_name: formData.get('first-name'),
@@ -407,9 +409,12 @@ let myForm = document.getElementById('contact-form').addEventListener('submit', 
         .then(function() {
             status.innerHTML = "Message sent successfully!";
             status.style.color = primaryForeColor;
+            subBut.textContent = "Send Message";
         }, function(error) {
             status.innerHTML = "Failed to send message. Please try again.";
             status.style.color = "red";
+            subBut.textContent = "Send Message";
+
         });
         
         this.reset();        
