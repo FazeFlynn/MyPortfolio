@@ -1,6 +1,6 @@
 <span>Languages</span>:  C++, Java, Python, SQL.<br>
 <span>Databases</span>:  SQL Databases (MySQL), NoSQL Databases (MongoDB).<br>
 <span>More</span>:  Analytical thinking, Creative solutions for complex problems.<br>
-<span>Web Development</span>:  Html, Css, JavaScript, Backend Technologies (Node.js, React.js).<br>
-<span>Data Science</span>:  Data Analysis, Visualization, Statistical Analysis, Tools(Excel,Tableau).<br>
+<span class="accent-color">Web Development</span>:  Html, Css, JavaScript, Backend Technologies (Node.js, React.js).<br>
+<span class="accent-color">Data Science</span>:  Data Analysis, Visualization, Statistical Analysis, Tools(Excel,Tableau).<br>
 <span>DSA</span>:  Proficient in various data structures (arrays, linked lists, trees, graphs), Algorithm design and optimization.<br>

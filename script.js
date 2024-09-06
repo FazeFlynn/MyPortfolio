@@ -36,6 +36,7 @@ function changeTheme(){
         isDark = false;
         primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
         primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
+        myImg.src = "img/webPikaGre1.png";
         changeLayerColor();
 
     } else {
@@ -46,6 +47,8 @@ function changeTheme(){
         isDark = true;
         primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
         primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
+        myImg.src = "img/webPikaPur.png";
+
         changeLayerColor();
 
     }

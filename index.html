@@ -31,11 +31,11 @@
       <nav class="navbar">
         <i id="mode" class='bx bx-moon'></i>
         <a href="/" class="active">Home</a>
-        <a onclick="scrollToSection('about-me')" href="#">About</a>
-        <a onclick="scrollToSection('my-skills')" href="#">Skills</a>
-        <a onclick="scrollToSection('my-projects')" href="#">Projects</a>
+        <a onclick="scrollToSection('about-me')">About</a>
+        <a onclick="scrollToSection('my-skills')">Skills</a>
+        <a onclick="scrollToSection('my-projects')">Projects</a>
         <!-- <a onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a> -->
-        <a onclick="scrollToSection('form-con')" href="#">Contact me</a>
+        <a onclick="scrollToSection('form-con')">Contact me</a>
         <i id="menu" class='bx bx-menu'></i>
       </nav>
     </header>
@@ -48,14 +48,15 @@
         <div class="btn-box">
           <a class="hover-eff" href="docs/IslamKathatResume.pdf" target="_blank">Hire me</a>
           <!-- <a class="hover-eff" href="https://drive.google.com/file/d/1-SqXriy2ICFajspeMd-ASN2F4Nm1ZnDB/view?usp=drive_link" target="_blank" >Hire me</a> -->
-          <a class="hover-eff" onclick="scrollToSection('form-con')" href="#">Contact me</a>
+          <a class="hover-eff" onclick="scrollToSection('form-con')">Contact me</a>
           <!-- <a class="hover-eff" onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a> -->
           <!-- <a class="hover-eff" onclick="openGmail()" href="#">Contact me</a> -->
         </div>
 
       </div>
       <div id="gallery-div">
-        <img id="img-slide" src="img/img1.png" alt="Photo">
+        <div id="img-back"></div>
+        <img id="img-slide" src="img/webPikaPur.png" alt="Photo">
       </div>
       
       <!-- <span class="home-imghover"></span> -->
@@ -105,7 +106,7 @@
   
 
         <a class="hovers" href="https://chromewebstore.google.com/detail/youtube-controls-for-stud/hhpfppdofgfkkdediiepaeogdnihmbdj" target="_blank">Chrome Extension</a>
-        <a class="hovers" href="#">My Dashboard</a>
+        <a class="hovers" onclick="scrollToSection('dash-main')">My Dashboard</a>
         <a class="hovers" href="https://github.com/Islam-Khan001/Projects/tree/main/pin-connect" target="_blank">My Social Media (Full Stack)</a>
 
 
@@ -126,6 +127,12 @@
       <h1 class="headings">About:</h1>
 
       <div id="about-me-p" class="skills-inner no-padding">
+      </div>
+    </div>
+
+    <div id="dash-main">
+      <div id="dash-outer">
+
       </div>
     </div>
 
