@@ -29,6 +29,7 @@ primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color
 
 function changeTheme(){
     if(isDark){
+        myImg.src = "img/webPikaGre1.png";
         root.style.setProperty('--primary-back-color', '#E8F5E9');
         root.style.setProperty('--primary-fore-color', '#004D40');
         root.style.setProperty('--font-color', 'black');
@@ -36,10 +37,10 @@ function changeTheme(){
         isDark = false;
         primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
         primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
-        myImg.src = "img/webPikaGre1.png";
         changeLayerColor();
 
     } else {
+        myImg.src = "img/webPikaPur.png";
         root.style.setProperty('--primary-back-color', '#000011');
         root.style.setProperty('--primary-fore-color', '#b55de9');
         root.style.setProperty('--font-color', '#fff');
@@ -47,7 +48,6 @@ function changeTheme(){
         isDark = true;
         primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
         primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
-        myImg.src = "img/webPikaPur.png";
 
         changeLayerColor();
 
@@ -61,9 +61,14 @@ let layersEnabled = false;
 function showAllLayer(){
 
     if(!layersEnabled){
-        ptests.forEach((divs) => {
-            divs.classList.add('expanded');
-        });
+
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = true;
+        })
+        
+
         allLayers.style.backgroundColor = primaryForeColor;
         allLayers.style.color = primaryBackColor;
         console.log("test color is set to - ", primaryForeColor);
@@ -71,16 +76,20 @@ function showAllLayer(){
 
         layersEnabled = true;
     } else {
-        ptests.forEach((divs) => {
-            divs.classList.remove('expanded');
-        });
+ 
+
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = false;
+        })
+
+
         allLayers.style.backgroundColor = 'transparent';
         console.log("test backcolor is set to - transparent");
         allLayers.style.color = primaryForeColor;
         console.log("test color is set to - ", primaryForeColor);
         allLayers.style.transform = "rotate(0deg)";
-
-
         layersEnabled = false;
 
     }
@@ -122,25 +131,9 @@ const foregroundColors = [
 
 
 
-// const root = document.documentElement;
-// const num = Math.floor(Math.random() * foregroundColors.length);
-  // Change CSS variables 
-// root.style.setProperty('--primary-fore-color', foregroundColors[num]);
-// root.style.setProperty('--font-color', foregroundColors[num]);
-// root.style.setProperty('--primary-back-color', backgroundColors[num]);
-
-// console.log('color index : ', num)
-
-// root.style.setProperty('--font-size', '20px');
-// root.style.setProperty('--border-width', '3px');
-
-
-
-
 fetch('docs/introText.txt')
             .then(response => response.text())
             .then(data => {
-                // Insert the content into the div
                 introText.innerHTML =  data;
                 
             })
@@ -149,98 +142,13 @@ fetch('docs/introText.txt')
 fetch('docs/aboutTxt.txt')
             .then(response => response.text())
             .then(data => {
-                // Insert the content into the div
                 aboutMeP.innerHTML =  data;
                 
             })
             .catch(error => console.error('Error fetching text file:', error)); 
 
 
-// let ptest2 = document.getElementById('p-test2');
-
-isSome = false;
-
-let fm = 0;
-
-document.querySelectorAll('.clicked').forEach((a) => {  
-    
-    let ptest = document.createElement('p');
-    ptest.classList.add('p-test');
-
-    fetch(`docs/mytxt${fm}.txt`)
-            .then(response => response.text())
-            .then(data => {
-                // Insert the content into the div
-                ptest.textContent =  data;
-                
-            })
-            .catch(error => console.error('Error fetching text file:', error));    
-
-    // ptest.textContent = pText;
-    a.insertAdjacentElement('afterend',ptest);    
-    fm++;
-});
-
-
-
 let ptests = document.querySelectorAll('.p-test');
-
-document.querySelectorAll('.clicked').forEach((a, index) => {
-    console.log('is it workign');
-    a.addEventListener('click', (event) => {
-        // isSome = true;
-
-
-        
-
-        
-
-        const clickedDiv = event.currentTarget; // The div that was clicked
-
-        console.log('Clicked div content:', clickedDiv.textContent);
-        console.log('Clicked div index:', index);
-
-        let mptest = a.nextElementSibling;
-
-        
-
-        // showP(ptest);
-        // isSome = false;
-        showAllp(mptest,a);
-        // showAllp(ptest);
-
-        
-        
-        // Example action: Change background color of clicked div
-        // clickedDiv.style.backgroundColor = 'lightblue';
-    });
-});
-
-function showAllp(mptest,a){
-    // ptest.classList.add('expanded');
-
-    ptests.forEach((divs) => {
-        divs.classList.remove('expanded');
-    });
-
-
-    if(!isSome){
-        mptest.classList.add('expanded');
-        allLayers.style.backgroundColor = 'transparent';
-        layersEnabled = false;
-        isSome = true;
-    } else {
-        mptest.classList.remove('expanded');
-        isSome = false;
-        allLayers.style.backgroundColor = 'transparent';
-        layersEnabled = false;
-
-
-    }
-
-}
-
-
 
 
 
@@ -249,63 +157,24 @@ isclicked = false;
 function showP(ptest){
     if(!isclicked){
         ptest.style.display = '';
-        // ptest.style.minHeight = '300px';
-        // ptest.style.padding = '3px';
+       
         ptest.style.maxHeight = '300px';
-        // ptest.style.height = '300px';
-        // ptest.style.width = '100%';
+      
         ptest.style.transform = 'scale(100%)';
         isclicked = true;
 
 
-        // ptest2.style.display = '';
-        // ptest2.style.height = '150px';
-        // ptest2.style.width = '100%';
         
     } else {
-        // ptest.style.display = 'none';
         ptest.style.maxHeight = '0px';
-        // ptest.style.minHeight = '0px';
-        // ptest.style.height = '0px';
-        // ptest.style.padding = '0px';
-        // ptest.style.width = '0px';
+ 
         ptest.style.transform = 'scale(90%)';
 
 
         isclicked = false;
 
-        // ptest2.style.height = '0px';
     }
 }
-
-// test.addEventListener('click', showP);
-
-// document.addEventListener('click', (event) => {
-//     if(!test.contains(event.target && !ptest.contains(event.target))){
-//         showP();
-//     }
-// })
-
-
-
-
-let imgArray = [1,2];
-
-function imageSlideShow(){
-    let clearImgInterval;
-
-    clearImgInterval = setInterval(() => {
-        
-
-
-
-    },5000)
-
-    
-
-}
-
-
 
 menuButton.addEventListener("click", showMenuContainer);
 
@@ -319,7 +188,6 @@ function showMenuContainer() {
         menuOverlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
-        // menuContainer.style.display = 'flex';
         let tx = 100;
         let clearSTMC;
         console.log("Working from loop");
@@ -377,19 +245,7 @@ function detectDevice() {
         console.log("User is on a desktop device");
     }
 }
-
 detectDevice();
-
-// function openGmail() {
-//     const email = 'faiz.14a@gmail.com';
-//     const subject = encodeURIComponent('Hey Islam!, I would like to talk.');
-//     const body = encodeURIComponent('Your message here...');
-//     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-    
-//     window.open(gmailUrl, '_blank');
-// }
-
-
 
 let myForm = document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -406,8 +262,6 @@ let myForm = document.getElementById('contact-form').addEventListener('submit', 
         message: formData.get('message')
     };
 
-
-    // Using EmailJS to send the form data
     emailjs.send('service_kx2oni7', 'template_2da9aeu', emailParams)
         .then(function() {
             status.innerHTML = "Message sent successfully!";
@@ -422,3 +276,53 @@ let myForm = document.getElementById('contact-form').addEventListener('submit', 
         
         this.reset();        
 });
+
+
+
+
+//============== testing was succesfull===================================================
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+
+                    allLayers.style.backgroundColor = 'transparent';
+        
+                    allLayers.style.color = primaryForeColor;
+
+                    allLayers.style.transform = "rotate(0deg)";
+                    layersEnabled = false;
+
+                    checkboxes.forEach((cb) => {
+                        if (cb !== this) cb.checked = false;
+                    });
+                }
+            });
+        });
+
+
+
+        isSome = false;
+        let fm2 = 0;
+        
+        document.querySelectorAll('.stick').forEach((p) => {  
+            
+            let newtest = document.createElement('p');
+            newtest.classList.add('new-test');
+        
+            fetch(`docs/mytxt${fm2}.txt`)
+                    .then(response => response.text())
+                    .then(data => {
+                        newtest.textContent =  data;
+                        
+                    })
+                    .catch(error => console.error('Error fetching text file:', error));    
+        
+            p.insertAdjacentElement('afterend',newtest);    
+            fm2++;
+        });
+
+
+// added both the repositories

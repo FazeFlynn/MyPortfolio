@@ -34,7 +34,6 @@
         <a onclick="scrollToSection('about-me')">About</a>
         <a onclick="scrollToSection('my-skills')">Skills</a>
         <a onclick="scrollToSection('my-projects')">Projects</a>
-        <!-- <a onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a> -->
         <a onclick="scrollToSection('form-con')">Contact me</a>
         <i id="menu" class='bx bx-menu'></i>
       </nav>
@@ -47,10 +46,7 @@
         <p id="intro-text"></p>
         <div class="btn-box">
           <a class="hover-eff" href="docs/IslamKathatResume.pdf" target="_blank">Hire me</a>
-          <!-- <a class="hover-eff" href="https://drive.google.com/file/d/1-SqXriy2ICFajspeMd-ASN2F4Nm1ZnDB/view?usp=drive_link" target="_blank" >Hire me</a> -->
           <a class="hover-eff" onclick="scrollToSection('form-con')">Contact me</a>
-          <!-- <a class="hover-eff" onclick="window.location.href='mailto:faiz.14a@gmail.com'" href="#">Contact me</a> -->
-          <!-- <a class="hover-eff" onclick="openGmail()" href="#">Contact me</a> -->
         </div>
 
       </div>
@@ -59,42 +55,84 @@
         <img id="img-slide" src="img/webPikaPur.png" alt="Photo">
       </div>
       
-      <!-- <span class="home-imghover"></span> -->
     </div>
     
     <div id="my-skills" class="skills-div">
       <div class="head-container">
         <h1 class="headings">Skills:</h1>
-        <!-- <p class="layer-hover">Open all layers</p> -->
         <i id="all-layers" class='bx bx-layer'></i>
       </div>
+
+
+      <form class="colorForm" action="">            
+
       
       
       <div class="skills-inner dt1">
         
-        <div class="d1">
+        <div class="d1">           
+            
+            <input id="1" type="checkbox" name="color" value="1">
+            <label for="1" id="click-test" class="hovers clicked lrel" >
+              <p class="stick">Data Analytics</p>             
+            </label> 
 
-          <a id="click-test" class="hovers clicked" >Data Analysis</a> 
-          <a class="hovers clicked" >Python</a>
-          <a class="hovers clicked" >Full Stack Web Development</a>
-          <a class="hovers clicked" >SQL</a>
-          <a class="hovers clicked" >Data Structures & Algorithms</a>
+              <input id="2" type="checkbox" name="color" value="2">
+            <label for="2" class="hovers clicked lrel" >
+              <p class="stick">Python</p>              
+            </label>
+
+              <input id="3" type="checkbox" name="color" value="3">
+            <label for="3" class="hovers clicked lrel" >              
+              <p class="stick">Full Stack Web Development</p>              
+            </label>
+
+              <input id="4" type="checkbox" name="color" value="4">
+            <label for="4" class="hovers clicked lrel" >
+              <p class="stick">SQL</p>
+            </label>
+
+              <input id="5" type="checkbox" name="color" value="5">
+            <label for="5" class="hovers clicked lrel" >              
+              <p class="stick">Data Structures & Algorithms</p>
+            </label>   
           
         </div>
         
         <div class="d1">
-          <a class="hovers clicked" >Java</a>
-          <a class="hovers clicked" >Problem Solving</a>
-          <a class="hovers clicked" >Post Production</a>
-          <a class="hovers clicked" >Photo Manipulation</a>
-          <a class="hovers clicked" >Audio Mixing</a>
+            
+            <input id="6" type="checkbox" name="color" value="1">
+            <label for="6" id="click-test2" class="hovers clicked lrel" >
+              <p class="stick">Java</p>             
+            </label> 
+
+              <input id="7" type="checkbox" name="color" value="2">
+            <label for="7" class="hovers clicked lrel" >
+              <p class="stick">Problem Solving</p>              
+            </label>
+
+              <input id="8" type="checkbox" name="color" value="3">
+            <label for="8" class="hovers clicked lrel" >              
+              <p class="stick">Post Production</p>              
+            </label>
+
+              <input id="9" type="checkbox" name="color" value="4">
+            <label for="9" class="hovers clicked lrel" >
+              <p class="stick">Photo Manipulation</p>
+            </label>
+
+              <input id="10" type="checkbox" name="color" value="5">
+            <label for="10" class="hovers clicked lrel" >              
+              <p class="stick">Audio Mixing</p>
+            </label>   
+
+
+
         </div>
 
-        <!-- <div class="d1 d2">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda deserunt quisquam sit animi aliquid minima quas quo magni, architecto itaque repudiandae incidunt, accusantium mollitia quod! Neque rerum maxime praesentium! Sapiente.</p>
-        </div> -->
-
       </div>
+    </form>
+
     </div>
 
     <div id="my-projects" class="skills-div">
@@ -102,13 +140,11 @@
 
       <div class="skills-inner">
 
-        <div class="d1">
-  
+        <div class="d1">  
 
         <a class="hovers" href="https://chromewebstore.google.com/detail/youtube-controls-for-stud/hhpfppdofgfkkdediiepaeogdnihmbdj" target="_blank">Chrome Extension</a>
         <a class="hovers" onclick="scrollToSection('dash-main')">My Dashboard</a>
         <a class="hovers" href="https://github.com/Islam-Khan001/Projects/tree/main/pin-connect" target="_blank">My Social Media (Full Stack)</a>
-
 
         </div>
 
@@ -117,7 +153,6 @@
         <a class="hovers" href="./Projects/Clock/index.html" target="_blank">Analog Clock</a>
         <a class="hovers" href="https://github.com/Islam-Khan001/MyProjects/tree/main/Netflix-Clone" target="_blank">Netflix Clone</a>
         <a class="hovers" href="https://github.com/Islam-Khan001/MyProjects/tree/main/Amazon-Clone" target="_blank" >Amazon Clone</a>
-
 
         </div>
       </div>
@@ -129,13 +164,6 @@
       <div id="about-me-p" class="skills-inner no-padding">
       </div>
     </div>
-
-    <div id="dash-main">
-      <div id="dash-outer">
-
-      </div>
-    </div>
-
 
     <div id="form-con">     
       
@@ -179,8 +207,6 @@
 
     <div id="menu-overlay">     
       <div id="menu-container">
-        <!-- <i class='bx bx-chevron-left'></i> -->
-        <!-- <i class='bx bx-chevron-right' ></i> -->
         <p><i class='bx bx-code' ></i>Faze Flynn</p>
         <a href="/" class="active">Home</a>
         <a onclick="scrollToSection('about-me')" href="#">About</a>
@@ -192,7 +218,6 @@
         <a href="https://www.instagram.com/fazeflynn" target="_blank">Instagram</a>
       </div>
 
-      <!-- <i id="menu" class='bx bx-menu'></i> -->
 
     </div>
 
