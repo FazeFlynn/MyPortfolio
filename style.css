@@ -8,26 +8,27 @@
     /* --primary-back-color: #090c0f;
     --primary-fore-color: #10f177; */
     
-    /* --primary-back-color: #ffffff; */
-    /* --primary-fore-color: #221927; */
+    /* --primary-back-color: #ffffff;
+    --primary-fore-color: #221927; */
 
-    /* --primary-back-color: #E8F5E9; */
-    /* --primary-fore-color: #004D40; */
+    /* --primary-back-color: #E8F5E9;
+    --primary-fore-color: #004D40; */
 
     /* --primary-back-color: #E8F5E9;
     --primary-fore-color: #003366; */
 
 
-    /* --primary-back-color: #2a0713; */
-    /* --primary-fore-color: #f30867; */
+    /* --primary-back-color: #2a0713;
+    --primary-fore-color: #f30867; */
 
-    /* --primary-back-color: red; */
-    /* --primary-fore-color: #eaba1a; */
+    /* --primary-back-color: red;
+    --primary-fore-color: #eaba1a; */
 
-    /* --primary-back-color: #000005; */
-    /* --primary-fore-color: #fff; */
+    /* --primary-back-color: #000005;
+    --primary-fore-color: #fff; */
 
     --font-color: #fff;
+    /* --font-color: black; */
     --font-size: 16px;
     --border-width: 2px;
 
@@ -62,6 +63,39 @@ body{
 
 
 }
+
+#theme-ind {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    top: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0%;
+
+    transition: opacity .5s ease;
+}
+
+#theme-ind-p {
+    background-color: var(--primary-back-color);
+    color: var(--primary-fore-color);
+    padding: .5vw 1.5vw;
+    border-radius: 1.5vw;
+    /* border-radius:  0 1.5vw 0 1.5vw; */
+    /* tl tr bl br - z */
+    /* border-radius:  1.5vw 0 1.5vw 1.5vw; */
+    /* border-radius:  0 1.5vw 1.5vw 1.5vw; */
+    /* border-radius:  0  0 1.5vw 1.5vw; */
+
+    box-shadow: 0px 0px 5px 2px var(--primary-fore-color);    
+
+}
+
+
 
 /* ================================= */
 /* scrollbar */
@@ -774,6 +808,15 @@ p span {
         min-height: 50px;
         min-width: 50px;
     }
+
+    #theme-ind {
+        top: 6%;
+        display: none;
+    }
+    #theme-ind-p {
+        padding: 1.3vw 2vw;
+        border-radius: 5vw;
+    }
     
 }
 
@@ -978,6 +1021,11 @@ p span {
     #mode {
         margin-right: 30px;
         font-size: 1.4em;
+    }
+
+    #theme-ind {
+        /* top: 6%; */
+        display: none;
     }
 
     

@@ -14,6 +14,19 @@ let allLayers = document.getElementById('all-layers');
 let theme = document.getElementById('mode');
 let subBut = document.getElementById('sub-button');
 
+let themeIndicator = document.getElementById('theme-ind');
+let themeIndP = document.getElementById('theme-ind-p');
+
+let themeTimeOut;
+let ShowInd = () => {
+    themeIndicator.style.opacity = "100%";
+    if(themeTimeOut) clearTimeout(themeTimeOut);
+    themeTimeOut =  setTimeout(() => {
+        themeIndicator.style.opacity = "0%";        
+    }, 2000);
+}
+
+
 
 
 const root = document.documentElement;
@@ -38,6 +51,8 @@ function changeTheme(){
         primaryForeColor = getComputedStyle(root).getPropertyValue('--primary-fore-color');
         primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
         changeLayerColor();
+        themeIndP.innerHTML = "Theme Switched to <Span>Elegent Green</span>";
+        ShowInd();
 
     } else {
         myImg.src = "img/webPikaPur.png";
@@ -50,6 +65,10 @@ function changeTheme(){
         primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color');
 
         changeLayerColor();
+        themeIndP.innerHTML = "Theme Switched to <Span>Purple Moon</span>";
+
+        ShowInd();
+
 
     }
 
