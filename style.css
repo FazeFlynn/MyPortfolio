@@ -306,10 +306,18 @@ body{
     height: 400px;
     width: 400px;
 
+    height: 450px;
+    width: 450px;
+
     margin: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 1s ease;
+
+
+ 
 
     /* box-shadow: 1px 1px 500px var(--primary-fore-color); */
     /* box-shadow: 0px 0px 500px var(--primary-fore-color); */
@@ -322,25 +330,85 @@ body{
     background-color: var(--primary-fore-color);
     /* background-color: transparent; */
     position: absolute;
+    /* overflow: none; */
     /* box-shadow: 0px 0px 100px 30px var(--primary-fore-color); */
-    box-shadow: 0px 0px 100px 80px var(--primary-fore-color);    
+    box-shadow: 0px 0px 120px 80px var(--primary-fore-color);    
+
 }
+
+
+#gallery-div span {
+    /* min-height: 100px; */
+    width: 400px;
+    /* background-color: red; */
+
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* mix-blend-mode:hard-light; */
+    
+    
+    
+    position: absolute;
+    text-align:justify;
+
+    padding: 0 20px;
+
+    color: var(--primary-back-color);
+    color: var(--font-color);
+
+
+
+}
+
+#gallery-div span p {
+    /* width: 300px; */
+    /* font-size: 1.8rem; */
+    font-size: 1rem;
+    display: inline;
+    /* background-color: blue; */
+    text-align:justify;
+    /* text-align:left; */
+
+    font-weight: 600;
+
+    color: var(--primary-back-color);
+
+    /* z-index: 99; */
+
+    /* box-shadow: 0px 0px 2px 2px var(--primary-fore-color);     */
+    
+
+
+}
+
 
 
 #img-slide{
     width: 100%;
-    border-radius: 30%;
+    border-radius: 35%;
+    border-radius: 50%;
     z-index: 2;
     transition: all 1s ease;
 
-    /* box-shadow: 0px 0px 40px var(--primary-fore-color) inset; */
-    box-shadow: 0px 0px 200px var(--primary-fore-color);
+    padding: 20px;
 
-    /* box-shadow: inset 0px 0px 190px var(--primary-fore-color), 0px 0px 200px var(--primary-fore-color); */
+
+    /* box-shadow: 0px 0px 40px var(--primary-fore-color) inset; */
+    box-shadow: 0px 0px 200px 10px var(--primary-fore-color);
+    /* box-shadow: 0px 0px 500px var(--primary-fore-color); */
+
+    /* box-shadow: inset 0px 0px 70px var(--primary-fore-color), 0px 0px 200px var(--primary-fore-color); */
 
 }
 
 #img-slide:hover {
+    /* transform: scale(110%) rotate(10deg); */
+
+}
+#gallery-div:hover {
     transform: scale(110%) rotate(10deg);
 
 }
