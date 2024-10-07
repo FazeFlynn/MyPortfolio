@@ -42,8 +42,8 @@ primaryBackColor = getComputedStyle(root).getPropertyValue('--primary-back-color
 
 function changeTheme(){
     if(isDark){
-        myImg.src = "img/webPikaGre1.png";
-        // myImg.src = "img/ik.png";
+        // myImg.src = "/img/webPikaGr1.png";
+        myImg.src = "/img/ik.png";
         root.style.setProperty('--primary-back-color', '#E8F5E9');
         root.style.setProperty('--primary-fore-color', '#004D40');
         root.style.setProperty('--font-color', 'black');
@@ -56,8 +56,8 @@ function changeTheme(){
         ShowInd();
 
     } else {
-        myImg.src = "img/webPikaPur.png";
-        // myImg.src = "img/ff.png";
+        // myImg.src = "/img/webPikaPur.png";
+        myImg.src = "/img/ff.png";
         root.style.setProperty('--primary-back-color', '#000011');
         root.style.setProperty('--primary-fore-color', '#b55de9');
         root.style.setProperty('--font-color', '#fff');
