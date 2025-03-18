@@ -948,10 +948,10 @@ p span {
     .skills-div {
         /* padding: 0 6% 0 6%; */
         /* margin: 0; */
-        -ms-user-select: none;
+        /* -ms-user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
-        user-select: none;
+        user-select: none; */
         
 
     }
